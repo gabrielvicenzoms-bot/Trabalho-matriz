@@ -8,6 +8,6 @@ lista = [
 aluno =['luis',67,3.07]
 lista.append(aluno)
 
-with open (r'C:\Users\3000016067\Contacts\arquivo.txt','a') as arquivo:
+with open ('arquivo.txt','w') as arquivo
     for i in lista:
         arquivo.write(f"{i}\n")
