@@ -4,6 +4,9 @@ filmes = [
     ["Matrix", 1999, 8.5],
     ["Avatar", 2009, 7.9],
     ["Interestelar", 2014, 8.7]
+    ["Vingadores", 2012, 8.0]
+    ["Sonic", 2020, 6.5]
+    ["Jumanji", 1995, 7.1]
 ]
 
 adicionar  = input('você deseja adicionar um novo filme?(digite apenas "sim" se deseja adicionar um novo filme)')
