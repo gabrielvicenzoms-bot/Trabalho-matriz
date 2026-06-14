@@ -1,13 +1,17 @@
-lista = [
-    ['joao', 98, 1.70],
-    ['victor', 18, 2.00],
-    ['gabriel', 75, 1.70],
+#Programa para adicionar um filme, ano que lançou e nota em um arquivo .txt
+
+filmes = [
+    ["Matrix", 1999, 8.5],
+    ["Avatar", 2009, 7.9],
+    ["Interestelar", 2014, 8.7]
 ]
 
 
-aluno =['luis',67,3.07]
-lista.append(aluno)
+novofilme = input('insira o novo filme')
+ano = input('o ano que lançou')
+nota = float(input('insira a nota do filme'))
+filmes.append([novofilme, ano, nota])
 
-with open ('arquivo.txt','w') as arquivo
-    for i in lista:
+with open ('arquivo.txt','w') as arquivo:
+    for i in filmes:
         arquivo.write(f"{i}\n")
