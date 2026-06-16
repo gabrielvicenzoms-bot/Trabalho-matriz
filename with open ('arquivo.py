@@ -29,3 +29,8 @@ while remover == 'sim':
 with open ('arquivo.txt','w') as arquivo:
     for i in filmes:
         arquivo.write(f"{i}\n")
+
+
+with open("arquivo.txt", "r") as arquivo:
+    ler = arquivo.read()
+    print (ler)
