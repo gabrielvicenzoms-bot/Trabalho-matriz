@@ -14,7 +14,8 @@ editar = input('Você deseja editar a lista de filme?(digite apenas "sim" se des
 
 
 while editar == 'sim':
-
+   
+    print("Lista atual de filmes:")
     # Percorrer a matriz
     for f in filmes:
         print(f)
@@ -48,7 +49,7 @@ while editar == 'sim':
         removido = input('Insira o nome do filme que deseja remover: ')
 
         # Percorre a lista procurando o filme informado pelo usuário
-        for f in filmes:
+        for f in filmes[:]:
         
             # Verifica se o nome do filme é igual ao escolhido
             if f[0] == removido:
@@ -104,7 +105,6 @@ while editar == 'sim':
     # Cria uma nova lista para armazenar os dados recuperados
     nova_lista = []
 
-
     # Abre o arquivo para leitura
     with open("arquivo.txt", "r") as arquivo:
 
@@ -123,10 +123,12 @@ while editar == 'sim':
 
     # Substitui a lista antiga pela lista recuperada do arquivo
     filmes = nova_lista
-
+    print("Lista recuperada do arquivo TXT:")
+    
+    for f in filmes:
+        print(f)
 
     editar = input('Você deseja editar a lista de filme?(digite apenas "sim" se deseja editar) ')
-
 
 
 print("Programa encerrado.")
