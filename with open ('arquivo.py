@@ -36,6 +36,8 @@ while editar == 'sim':
         # Adiciona um novo filme no final da lista composta
         filmes.append([novofilme, ano, nota])
 
+        for f in filmes:
+         print(f)
 
         adicionar = input('Você deseja adicionar um novo filme?(digite apenas "sim" se deseja adicionar um novo filme) ')
 
@@ -45,8 +47,11 @@ while editar == 'sim':
 
 
     while remover == 'sim':
+        for f in filmes:
+         print(f)
 
         removido = input('Insira o nome do filme que deseja remover: ')
+        
 
         # Percorre a lista procurando o filme informado pelo usuário
         for f in filmes[:]:
@@ -62,21 +67,26 @@ while editar == 'sim':
 
 
 
-    atualizar = input('Deseja atualizar um filme? ')
+    atualizar = input('Deseja editar a nota um flime?(digite apenas "sim" se deseja editar um filme)  ')
 
 
     while atualizar == "sim":
+        for f in filmes:
+         print(f)
 
         filme_atualizar = input("Digite o filme: ")
 
         # Procura o filme que será atualizado
         for f in filmes:
-           
+
+             
             # Confere o nome do filme
             if f[0] == filme_atualizar:
                 
                 # Atualiza a nota (posição 2 da lista interna)
                 f[2] = float(input("Digite a nova nota: "))
+            
+                    
 
 
         atualizar = input('Deseja atualizar outro? ')
